@@ -36,7 +36,7 @@
     <!--
       Now we provide each todo-item with the todo object
       it's representing, so that its content can be dynamic.
-      We also need to provide each component with a "key",
+      We also need to provide texteach component with a "key",
       which will be explained later.
     -->
     <todo-item
@@ -45,6 +45,15 @@
       v-bind:key="item.id">
     </todo-item>
   </ol>
+</div>
+
+<div id="app-8">
+   <div>
+   	 <ul>
+   	   <li v-on:click="showLongestToReport">Top 5 Longest to Report</li>
+   	 </ul>
+   </div>
+   <div>{{test}}</div>
 </div>
 
 <script src="https://unpkg.com/vue"></script>

@@ -63,4 +63,16 @@ var app7 = new Vue({
       { id: 2, text: 'Whatever else humans are supposed to eat' }
     ]
   }
-})
+});
+
+var app8 = new Vue({
+  el: '#app-8',
+  data: {
+  	test: 1
+  },
+  methods: {
+  	showLongestToReport: function(){
+  		this.$data.test = 5;
+  	}
+  },
+});
