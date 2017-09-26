@@ -72,7 +72,7 @@ var app8 = new Vue({
   },
   methods: {
   	showLongestToReport: function(){
-  		this.$data.test = 5;
+  		this.$data.test++;
   	}
   },
 });
