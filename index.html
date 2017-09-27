@@ -50,10 +50,15 @@
 <div id="app-8">
    <div>
    	 <ul>
-   	   <li v-on:click="showLongestToReport">Top 5 Longest to Report</li>
+   	   <li v-on:click="showLongestToReport">Top 5 Longest to Report
+         <ol>
+           <li v-for="item in test">
+             Offense {{ item.offense }} Occured at {{ item.date_occu }} and was Reported at {{ item.date_rept }}
+           </li>
+         </ol>
+       </li>
    	 </ul>
    </div>
-   <div>{{test}}</div>
 </div>
 
 <script src="https://unpkg.com/vue"></script>

@@ -68,12 +68,19 @@ var app7 = new Vue({
 var app8 = new Vue({
   el: '#app-8',
   data: {
-  	test: 1
+  	test: []
   },
   methods: {
   	showLongestToReport: function(){
       this.$http.get('https://fortlauderdale.data.socrata.com/resource/7cht-qcbm.json').then(response => {
-        this.$data.test = response.body;
+        var items = response.body;
+        items.sort(function(x, y){
+          function timeToReport(x){
+            return new Date(Date.parse(x.date_occu)) - new Date(Date.parse(x.date_rept));
+          };
+          return timeToReport(x) - timeToReport(y);
+        });
+        this.$data.test = items.slice(0,5);
       }, response => {
         console.log(response);
       });
