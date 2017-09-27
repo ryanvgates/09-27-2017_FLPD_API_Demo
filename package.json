@@ -1,0 +1,22 @@
+{
+  "name": "09-27-2017_flpd_api_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanvgates/09-27-2017_FLPD_API_Demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanvgates/09-27-2017_FLPD_API_Demo/issues"
+  },
+  "homepage": "https://github.com/ryanvgates/09-27-2017_FLPD_API_Demo#readme",
+  "dependencies": {
+    "vue-resource": "^1.3.4"
+  }
+}

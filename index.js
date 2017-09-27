@@ -72,7 +72,11 @@ var app8 = new Vue({
   },
   methods: {
   	showLongestToReport: function(){
-  		this.$data.test++;
+      this.$http.get('https://fortlauderdale.data.socrata.com/resource/7cht-qcbm.json').then(response => {
+        this.$data.test = response.body;
+      }, response => {
+        console.log(response);
+      });
   	}
   },
 });
