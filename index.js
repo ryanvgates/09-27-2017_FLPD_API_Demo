@@ -9,7 +9,7 @@ var app = new Vue({
         var items = response.body;
         items.sort(function(x, y){
           function timeToReport(x){
-            return new Date(Date.parse(x.date_occu)) - new Date(Date.parse(x.date_rept));
+            return new Date(Date.parse(x.date_rept)) - new Date(Date.parse(x.date_occu));
           };
           return timeToReport(x) - timeToReport(y);
         });
